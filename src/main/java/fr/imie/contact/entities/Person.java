@@ -1,5 +1,7 @@
 package fr.imie.contact.entities;
 
+import java.time.*;
+
 public class Person {
 
   private String firstName;
@@ -7,6 +9,8 @@ public class Person {
   private String lastName;
 
   private String email;
+
+  private LocalDate birthDate;
 
   public Person(String firstName, String lastName) {
     this.firstName = firstName;
@@ -35,6 +39,14 @@ public class Person {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public LocalDate getBirthDate() {
+    return birthDate;
+  }
+
+  public void setBirthDate(LocalDate birthDate) {
+    this.birthDate = birthDate;
   }
 
 }
