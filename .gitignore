@@ -6,6 +6,7 @@ gradle/
 *.iws
 bin/
 build/
+out/
 target/
 var/
 vendor/
