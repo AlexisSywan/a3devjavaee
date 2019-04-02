@@ -19,7 +19,7 @@ public class PersonServlet extends HttpServlet {
     throws ServletException, IOException {
     List<Person> persons = repository.findAll();
     request.setAttribute("persons", persons);
-    request.getRequestDispatcher("person.jsp").forward(request, response);
+    request.getRequestDispatcher("/WEB-INF/views/person.jsp").forward(request, response);
   }
 
 }
