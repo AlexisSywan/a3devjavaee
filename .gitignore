@@ -1,0 +1,10 @@
+
+.gradle/
+gradle/
+*.ipr
+*.iws
+bin/
+build/
+target/
+var/
+vendor/
