@@ -18,6 +18,7 @@ public class PersonServlet extends HttpServlet {
   protected void service(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
     List<Person> persons = repository.findAll();
+    request.setAttribute("persons", persons);
     request.getRequestDispatcher("person.jsp").forward(request, response);
   }
 
