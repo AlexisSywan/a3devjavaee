@@ -21,6 +21,8 @@
    <c:forEach var="person" items="${persons}" >
      <tr>
       <td>${person.firstName}</td>
+      <td>${person.lastName}</td>
+      <td>${person.email}</td>
      </tr>
    </c:forEach>
  </tbody>
