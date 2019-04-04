@@ -1,6 +1,7 @@
 package fr.imie.contact.repositories;
 
 import fr.imie.contact.entities.BankAccount;
+import fr.imie.contact.entities.Person;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -16,8 +17,16 @@ public class BankAccountRepository {
         return em.createQuery("select ba from BankAccount ba", BankAccount.class).getResultList();
     }
 
+    public BankAccount findById(Integer id) {
+        return em.find(BankAccount.class, id);
+    }
+
+
 
     public void save(BankAccount bankAccount) {
-        em.persist(bankAccount);
-    }
+        if (bankAccount.getId() == null) {
+            em.persist(bankAccount);
+        }else {
+            em.merge(bankAccount);
+        }    }
 }
