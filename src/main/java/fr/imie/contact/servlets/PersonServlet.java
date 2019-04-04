@@ -9,6 +9,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import java.io.*;
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -22,10 +23,12 @@ public class PersonServlet extends HttpServlet {
             throws ServletException, IOException {
         if (request.getMethod().equalsIgnoreCase("post")) {
 
+
             Person person = new Person();
             person.setFirstName(request.getParameter("firstName"));
             person.setLastName(request.getParameter("lastName"));
             person.setEmail(request.getParameter("email"));
+
 
             String text = request.getParameter("birthDate");
             LocalDate date = DateUtils.toLocalDate(text);
@@ -33,6 +36,13 @@ public class PersonServlet extends HttpServlet {
 
             repository.save(person);
         }
+
+        if (request.getPathInfo()!= null && request.getPathInfo().matches("/delete/[0-9]+")) {
+            Integer id = Integer.parseInt(request.getPathInfo().split("/")[2]);
+            repository.deleteById(id);
+
+        }
+
 
         List<Person> persons = repository.findAll();
         request.setAttribute("persons", persons);

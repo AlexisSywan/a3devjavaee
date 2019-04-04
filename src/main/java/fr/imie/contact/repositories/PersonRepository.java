@@ -22,6 +22,11 @@ public class PersonRepository {
         return em.find(Person.class, id);
     }
 
+    public void deleteById(Integer id) {
+        Person person = findById(id);
+        em.remove(person);
+    }
+
     public void save(Person person) {
         em.persist(person);
     }
