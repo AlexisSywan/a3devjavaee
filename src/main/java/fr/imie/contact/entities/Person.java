@@ -1,52 +1,84 @@
 package fr.imie.contact.entities;
 
+import javax.persistence.*;
 import java.time.*;
+import java.util.*;
 
+@Entity
 public class Person {
 
-  private String firstName;
+    @Id @GeneratedValue
+    private Integer id;
 
-  private String lastName;
+    private String firstName;
 
-  private String email;
+    private String lastName;
 
-  private LocalDate birthDate;
+    private String email;
 
-  public Person(String firstName, String lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
+    private LocalDate birthDate;
 
-  public String getFirstName() {
-    return firstName;
-  }
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.PERSIST)
+    private List<BankAccount> accounts = new ArrayList<BankAccount>();
 
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
+    // region // constructors getters setters
 
-  public String getLastName() {
-    return lastName;
-  }
+    public Person() {
+    }
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public Integer getId() {
+        return id;
+    }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-  public LocalDate getBirthDate() {
-    return birthDate;
-  }
+    public String getFirstName() {
+        return firstName;
+    }
 
-  public void setBirthDate(LocalDate birthDate) {
-    this.birthDate = birthDate;
-  }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public List<BankAccount> getAccounts() {
+        return accounts;
+    }
+
+    public void addAccount(BankAccount account) {
+        this.accounts.add(account);
+    }
+
+    // endregion
 
 }

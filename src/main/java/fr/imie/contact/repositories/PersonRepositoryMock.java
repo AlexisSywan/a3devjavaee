@@ -8,7 +8,7 @@ public class PersonRepositoryMock extends PersonRepository {
   private List persons = new ArrayList();
 
   public PersonRepositoryMock() {
-    save(new Person("anakin", "skywalker"));
+    save(new Person("anakin", "skywalkerrr"));
     save(new Person("luke", "skywalker"));
     save(new Person("leia", "organa"));
   }

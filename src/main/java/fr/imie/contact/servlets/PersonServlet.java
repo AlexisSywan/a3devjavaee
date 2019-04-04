@@ -1,25 +1,42 @@
 package fr.imie.contact.servlets;
 
-import fr.imie.contact.entities.Person;
-import fr.imie.contact.repositories.PersonRepository;
-import fr.imie.contact.repositories.PersonRepositoryMock;
+import fr.imie.contact.DateUtils;
+import fr.imie.contact.entities.*;
+import fr.imie.contact.repositories.*;
 
-import javax.servlet.ServletException;
+import javax.inject.*;
+import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import java.io.*;
+import java.time.LocalDate;
 import java.util.*;
 
 @WebServlet("/person/*")
 public class PersonServlet extends HttpServlet {
 
-  private PersonRepository repository = new PersonRepositoryMock();
+    @Inject
+    private PersonRepository repository;
 
-  protected void service(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-    List<Person> persons = repository.findAll();
-    request.setAttribute("persons", persons);
-    request.getRequestDispatcher("/WEB-INF/views/person.jsp").forward(request, response);
-  }
+    protected void service(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        if (request.getMethod().equalsIgnoreCase("post")) {
+
+            Person person = new Person();
+            person.setFirstName(request.getParameter("firstName"));
+            person.setLastName(request.getParameter("lastName"));
+            person.setEmail(request.getParameter("email"));
+
+            String text = request.getParameter("birthDate");
+            LocalDate date = DateUtils.toLocalDate(text);
+            person.setBirthDate(date);
+
+            repository.save(person);
+        }
+
+        List<Person> persons = repository.findAll();
+        request.setAttribute("persons", persons);
+        request.getRequestDispatcher("/WEB-INF/views/person.jsp").forward(request, response);
+    }
 
 }
