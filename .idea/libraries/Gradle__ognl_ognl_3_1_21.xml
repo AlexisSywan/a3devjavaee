@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ognl:ognl:3.1.21">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ognl/ognl/3.1.21/d04408e84b7ed4b51133ff3a3992e79307ae0b00/ognl-3.1.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ognl/ognl/3.1.21/fb243e7d12ac92c7207bbdb326b5d6fb688a963e/ognl-3.1.21-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -4,6 +4,10 @@
     <bytecodeTargetLevel>
       <module name="a3devjavaee.main" target="1.8" />
       <module name="a3devjavaee.test" target="1.8" />
+      <module name="a3devjavaee.web-servlet.main" target="1.8" />
+      <module name="a3devjavaee.web-servlet.test" target="1.8" />
+      <module name="a3devjavaee.web-struts2.main" target="1.8" />
+      <module name="a3devjavaee.web-struts2.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -3,8 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/a3devjavaee.iml" filepath="$PROJECT_DIR$/a3devjavaee.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/a3devjavaee.main.iml" filepath="$PROJECT_DIR$/.idea/modules/a3devjavaee.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/a3devjavaee.test.iml" filepath="$PROJECT_DIR$/.idea/modules/a3devjavaee.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-servlet/a3devjavaee.web-servlet.iml" filepath="$PROJECT_DIR$/.idea/modules/web-servlet/a3devjavaee.web-servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-servlet/a3devjavaee.web-servlet.main.iml" filepath="$PROJECT_DIR$/.idea/modules/web-servlet/a3devjavaee.web-servlet.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-servlet/a3devjavaee.web-servlet.test.iml" filepath="$PROJECT_DIR$/.idea/modules/web-servlet/a3devjavaee.web-servlet.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-struts2/a3devjavaee.web-struts2.iml" filepath="$PROJECT_DIR$/.idea/modules/web-struts2/a3devjavaee.web-struts2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-struts2/a3devjavaee.web-struts2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/web-struts2/a3devjavaee.web-struts2.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web-struts2/a3devjavaee.web-struts2.test.iml" filepath="$PROJECT_DIR$/.idea/modules/web-struts2/a3devjavaee.web-struts2.test.iml" />
     </modules>
   </component>
 </project>

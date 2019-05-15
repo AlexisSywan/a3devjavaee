@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.struts:struts2-convention-plugin:2.5.20">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-convention-plugin/2.5.20/5d00a6842bc1e891862582c336db92e21ef4683f/struts2-convention-plugin-2.5.20.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.struts/struts2-convention-plugin/2.5.20/622fec182899c450155da27d1ffe7ca6eaa572b3/struts2-convention-plugin-2.5.20-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
