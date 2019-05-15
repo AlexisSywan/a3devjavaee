@@ -18,11 +18,11 @@ public class PersonRepository {
                 .getResultList();
     }
 
-    public Person findById(Integer id) {
+    public Person findById(int id) {
         return em.find(Person.class, id);
     }
 
-    public void deleteById(Integer id) {
+    public void deleteById(int id) {
         Person person = findById(id);
         em.remove(person);
     }

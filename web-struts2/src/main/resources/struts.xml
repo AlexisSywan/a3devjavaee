@@ -6,10 +6,10 @@
     <package name="default" extends="struts-default">
         <action name="person_save" class="fr.imie.contact.actions.PersonAction" method="save">
             <result name="input">/WEB-INF/views/person.jsp</result>
-            <result name="success">/WEB-INF/views/person.jsp</result>
+            <result name="success" type="redirectAction">person_all</result>
         </action>
         <action name="person_delete" class="fr.imie.contact.actions.PersonAction" method="deleteById">
-            <result name="success">/WEB-INF/views/person.jsp</result>
+            <result name="success" type="redirectAction">person_all</result>
         </action>
         <action name="person_all" class="fr.imie.contact.actions.PersonAction" method="findAll">
             <result name="success">/WEB-INF/views/person.jsp</result>

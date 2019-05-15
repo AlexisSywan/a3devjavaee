@@ -7,14 +7,15 @@ import java.util.*;
 public class PersonRepositoryMock extends PersonRepository {
 
     //  private List persons = new ArrayList();
-    private Map persons = new TreeMap();
+    private static Map persons = new TreeMap();
 
     private static int autoIncrement = 1;
 
-    public PersonRepositoryMock() {
-        save(new Person("anakin", "skywalkerrr"));
-        save(new Person("luke", "skywalker"));
-        save(new Person("leia", "organa"));
+    static {
+        PersonRepositoryMock mock = new PersonRepositoryMock();
+        mock.save(new Person("anakin", "skywalkerrr"));
+        mock.save(new Person("luke", "skywalker"));
+        mock.save(new Person("leia", "organa"));
     }
 
     public List<Person> findAll() {

@@ -17,6 +17,16 @@ public class PersonAction extends ActionSupport {
     private List<Person> persons;
     private PersonRepository repository = new PersonRepositoryMock();
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int id;
+
     public PersonAction() {
     }
 
@@ -27,7 +37,7 @@ public class PersonAction extends ActionSupport {
 
     public String deleteById() {
         //TODO recup id
-        //repository.deleteBy(id);
+        repository.deleteById(id);
 
         return SUCCESS;
     }
